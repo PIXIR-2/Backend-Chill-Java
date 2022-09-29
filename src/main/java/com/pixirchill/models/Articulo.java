@@ -7,18 +7,39 @@ import lombok.Data;
 
 @Data
 @Entity
+@Table(name = "articulo")
 public class Articulo {
 
     @Id
     private String codBarras;
+
     private String codAsociado;
-    private Long idClasificacion; //Clasificacion
+
+
+    @ManyToOne
+    @JoinColumn(name = "id_clasificacion")
+    // private Long idClasificacion; //Clasificacion
+    private Clasificacion clasificacion;
+
+    @ManyToOne
+    @JoinColumn(name = "id_unidad")
+    // private Long idUnidad; //UnidadMedida
+    private UnidadMedida unidadMedida;
+
+    @ManyToOne
+    @JoinColumn(name = "id_proveedor")
+    // private Long idProveedor; //Proveedor
+    private Proveedor proveedor;
+
+    @OneToOne
+    private ArticuloImagen articuloImagen;
+
+
+
     private String codInterno;
     private String descripcion;
     private String descripcionCorta;
     private Long cantidadUm;
-    private Long idUnidad; //UnidadMedida
-    private Long idProveedor; //Proveedor
     private Double precioCompra;
     private Double utilidad;
     private Double precioVenta;
