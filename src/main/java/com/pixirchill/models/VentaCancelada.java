@@ -1,6 +1,9 @@
 package com.pixirchill.models;
 
 import javax.persistence.*;
+
+import com.pixirchill.models.compositekeys.*;
+
 import java.util.Date;
 import lombok.Data;
 
@@ -8,11 +11,13 @@ import lombok.Data;
 @Entity
 public class VentaCancelada {
 
-    @Id
+    @EmbeddedId
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPos;
+    private VentaCanceladaPK ventaCanceladaPK;
+   
+    // private Long idPos;
 
-    private Long idVentaCancel;
+    // private Long idVentaCancel;
 
     private String vendedor;
     private Date fecha;
