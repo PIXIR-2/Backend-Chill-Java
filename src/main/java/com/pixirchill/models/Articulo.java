@@ -16,23 +16,23 @@ public class Articulo {
     private String codAsociado;
 
 
-    @ManyToOne
-    @JoinColumn(name = "id_clasificacion")
-    // private Long idClasificacion; //Clasificacion
-    private Clasificacion clasificacion;
+    // @ManyToOne
+    // @JoinColumn(name = "id_clasificacion")
+    // // private Long idClasificacion; //Clasificacion
+    // private Clasificacion clasificacion;
 
-    @ManyToOne
-    @JoinColumn(name = "id_unidad")
-    // private Long idUnidad; //UnidadMedida
-    private UnidadMedida unidadMedida;
+    // @ManyToOne
+    // @JoinColumn(name = "id_unidad")
+    // // private Long idUnidad; //UnidadMedida
+    // private UnidadMedida unidadMedida;
 
-    @ManyToOne
-    @JoinColumn(name = "id_proveedor")
-    // private Long idProveedor; //Proveedor
-    private Proveedor proveedor;
+    // @ManyToOne
+    // @JoinColumn(name = "id_proveedor")
+    // // private Long idProveedor; //Proveedor
+    // private Proveedor proveedor;
 
-    @OneToOne
-    private ArticuloImagen articuloImagen;
+    // @OneToOne
+    // private ArticuloImagen articuloImagen;
 
 
 
