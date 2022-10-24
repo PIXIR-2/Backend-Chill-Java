@@ -5,7 +5,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.pixirchill.models.*;
 
-@RepositoryRestResource(path="articulo")
-public interface ArticuloRepository  extends JpaRepository<Articulo, String>{
 
+@RepositoryRestResource(path="ventacanceladaarticulo")
+public interface VentaCanceladaArticuloRepository  extends JpaRepository<VentaCanceladaArticulo, Long>{
+    
 }
